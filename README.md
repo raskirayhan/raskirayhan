@@ -135,9 +135,9 @@ I'm **Sheikh Raski Rayhan**, an enthusiastic and results-driven **Full Stack Dev
 
 | Project | Description | Tech Stack | Links |
 | :--- | :--- | :--- | :--- |
-| **Full Stack E-Commerce Solution** | Comprehensive multi-vendor e-commerce platform with secure payments, order management & admin dashboard. | `Next.js` `TypeScript` `Node.js` `MongoDB` `Stripe` | [Live Demo ↗](https://github.com/raskirayhan) • [Code ↗](https://github.com/raskirayhan) |
-| **Real-Time Task Collaboration App** | Kanban task board system featuring live socket updates, role-based auth, and drag-and-drop cards. | `React` `Redux Toolkit` `Express` `Socket.io` `PostgreSQL` | [Live Demo ↗](https://github.com/raskirayhan) • [Code ↗](https://github.com/raskirayhan) |
-| **Interactive Social Community Hub** | Dynamic community network supporting real-time chat, media sharing, likes, comments, and member profiles. | `MERN Stack` `TailwindCSS` `Cloudinary` `JWT` | [Live Demo ↗](https://github.com/raskirayhan) • [Code ↗](https://github.com/raskirayhan) |
+| **🛠️ FixItNow** | Modern on-demand repair, booking, and home maintenance platform with interactive booking workflow & clean responsive UI. | `React` `Next.js` `Node.js` `Express` `MongoDB` `TailwindCSS` | [Live Demo ↗](https://fix-it-now-taupe.vercel.app/) • [Code ↗](https://github.com/raskirayhan/FixItNow-) |
+| **🏛️ G3 Architects Agency** | Professional architectural firm showcase platform featuring sleek project portfolios, client testimonials, and responsive layouts. | `React` `JavaScript` `TailwindCSS` `UI/UX` | [Live Demo ↗](https://g3-architect-website-repo.vercel.app/) • [Code ↗](https://github.com/raskirayhan/g3-architect-website-repo) |
+| **🐾 WarmPaws** | Compassionate pet adoption & animal rescue platform connecting animals in need with caring homes and community support. | `MERN Stack` `Authentication` `REST APIs` `TailwindCSS` | [Live Demo ↗](https://github.com/raskirayhan/WarmPaws) • [Code ↗](https://github.com/raskirayhan/WarmPaws) |
 
 ---
 
