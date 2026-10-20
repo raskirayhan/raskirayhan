@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 1200px;
+      height: 440px;
+      overflow: hidden;
+      background: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    .banner {
+      position: relative;
+      width: 1200px;
+      height: 440px;
+      background: linear-gradient(135deg, #0a0c16 0%, #0f172a 40%, #020617 100%);
+      border-radius: 20px;
+      border: 1.5px solid rgba(51, 65, 85, 0.7);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+    /* Grid Pattern */
+    .grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(51, 65, 85, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(51, 65, 85, 0.25) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+    /* Ambient Glows */
+    .glow-cyan {
+      position: absolute;
+      top: 60px;
+      left: 50px;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.45) 0%, transparent 70%);
+      filter: blur(50px);
+      pointer-events: none;
+    }
+    .glow-purple {
+      position: absolute;
+      bottom: 20px;
+      right: 50px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(124, 58, 237, 0.45) 0%, transparent 70%);
+      filter: blur(50px);
+      pointer-events: none;
+    }
+    .glow-pink {
+      position: absolute;
+      top: -20px;
+      left: 550px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.25) 0%, transparent 70%);
+      filter: blur(50px);
+      pointer-events: none;
+    }
+    /* Window Bar */
+    .window-bar {
+      height: 36px;
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(51, 65, 85, 0.6);
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      gap: 8px;
+      z-index: 2;
+    }
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #f59e0b; }
+    .dot-green { background: #10b981; }
+    .bar-title {
+      margin-left: 14px;
+      color: #64748b;
+      font-size: 13px;
+      font-family: 'Consolas', 'Fira Code', monospace;
+    }
+    /* Content Layout */
+    .content {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 45px;
+      gap: 36px;
+      z-index: 2;
+    }
+    /* Avatar Frame */
+    .avatar-wrapper {
+      position: relative;
+      width: 170px;
+      height: 170px;
+      flex-shrink: 0;
+    }
+    .avatar-glow-ring {
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #38bdf8, #818cf8, #ec4899);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+    }
+    .avatar-img-box {
+      position: relative;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #0f172a;
+      background: #0f172a;
+    }
+    .avatar-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .online-indicator {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      width: 22px;
+      height: 22px;
+      background: #0f172a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .online-dot {
+      width: 14px;
+      height: 14px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+    }
+    /* Center Info */
+    .info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .role-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      padding: 5px 14px;
+      border-radius: 20px;
+      width: fit-content;
+      color: #38bdf8;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .role-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 6px #38bdf8;
+    }
+    .name {
+      font-size: 46px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      background: linear-gradient(90deg, #38bdf8 0%, #a855f7 50%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+    .tagline {
+      color: #94a3b8;
+      font-size: 15px;
+      line-height: 1.4;
+      max-width: 580px;
+    }
+    .contact-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 2px;
+    }
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(51, 65, 85, 0.8);
+      padding: 4px 12px;
+      border-radius: 12px;
+      color: #cbd5e1;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .tech-pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+    .tech-pill {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 5px 12px;
+      border-radius: 8px;
+      color: #e2e8f0;
+      font-size: 12px;
+      font-family: 'Consolas', 'Fira Code', monospace;
+      font-weight: 600;
+    }
+    .tech-pill.green { border-color: rgba(34, 197, 94, 0.4); }
+    .tech-pill.blue { border-color: rgba(96, 165, 250, 0.4); }
+    .tech-pill.purple { border-color: rgba(168, 85, 247, 0.4); }
+    .tech-pill.pink { border-color: rgba(236, 72, 153, 0.4); }
+    /* Right Terminal Card */
+    .terminal-card {
+      width: 280px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1.5px solid #334155;
+      border-radius: 14px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+    .term-head {
+      height: 30px;
+      background: #1e293b;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      gap: 6px;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.6);
+    }
+    .term-title {
+      margin-left: 8px;
+      font-size: 11px;
+      color: #94a3b8;
+      font-family: 'Consolas', monospace;
+    }
+    .term-body {
+      padding: 14px 16px;
+      font-family: 'Consolas', 'Fira Code', monospace;
+      font-size: 11.5px;
+      line-height: 1.6;
+      color: #f1f5f9;
+    }
+    .c-kw { color: #38bdf8; }
+    .c-var { color: #f1f5f9; }
+    .c-op { color: #ec4899; }
+    .c-key { color: #a5b4fc; }
+    .c-str { color: #86efac; }
+    .c-bool { color: #38bdf8; }
+    .term-bottom {
+      margin-top: 10px;
+      padding: 6px 10px;
+      background: #020617;
+      border-radius: 6px;
+      color: #10b981;
+      font-size: 10.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    /* Bottom bar */
+    .bottom-stripe {
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(90deg, #38bdf8, #a855f7, #ec4899);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="grid"></div>
+    <div class="glow-cyan"></div>
+    <div class="glow-purple"></div>
+    <div class="glow-pink"></div>
+
+    <!-- Window Bar -->
+    <div class="window-bar">
+      <div class="dot dot-red"></div>
+      <div class="dot dot-yellow"></div>
+      <div class="dot dot-green"></div>
+      <span class="bar-title">github.com/raskirayhan / SheikhRaskiRayhan &bull; fullstack.developer</span>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <!-- Avatar with glowing border -->
+      <div class="avatar-wrapper">
+        <div class="avatar-glow-ring"></div>
+        <div class="avatar-img-box">
+          <img src="avatar.jpg" alt="Sheikh Raski Rayhan" />
+        </div>
+        <div class="online-indicator">
+          <div class="online-dot"></div>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="info">
+        <div class="role-badge">
+          <div class="role-dot"></div>
+          Full Stack Developer &bull; Software Engineer
+        </div>
+        <h1 class="name">Sheikh Raski Rayhan</h1>
+        <p class="tagline">
+          Passionate about crafting scalable, high-performance web applications &amp; modern software systems with clean architecture.
+        </p>
+
+        <div class="contact-row">
+          <div class="contact-pill">✉️ raskirayhan@gmail.com</div>
+          <div class="contact-pill">📞 +880 1779-181871</div>
+        </div>
+
+        <div class="tech-pills">
+          <div class="tech-pill">⚛️ React / Next.js</div>
+          <div class="tech-pill green">🟢 Node / Express</div>
+          <div class="tech-pill blue">📘 TypeScript</div>
+          <div class="tech-pill purple">🍃 MongoDB / SQL</div>
+          <div class="tech-pill pink">🎨 TailwindCSS</div>
+        </div>
+      </div>
+
+      <!-- Terminal Widget -->
+      <div class="terminal-card">
+        <div class="term-head">
+          <div class="dot dot-red" style="width: 8px; height: 8px;"></div>
+          <div class="dot dot-yellow" style="width: 8px; height: 8px;"></div>
+          <div class="dot dot-green" style="width: 8px; height: 8px;"></div>
+          <span class="term-title">developer.config.ts</span>
+        </div>
+        <div class="term-body">
+          <span class="c-kw">const</span> <span class="c-var">engineer</span> <span class="c-op">=</span> {<br>
+          &nbsp;&nbsp;<span class="c-key">name:</span> <span class="c-str">'Raski Rayhan'</span>,<br>
+          &nbsp;&nbsp;<span class="c-key">role:</span> <span class="c-str">'Software Engineer'</span>,<br>
+          &nbsp;&nbsp;<span class="c-key">batch:</span> <span class="c-str">'Level 2 Batch 2026'</span>,<br>
+          &nbsp;&nbsp;<span class="c-key">status:</span> <span class="c-str">'Open for Work'</span>,<br>
+          &nbsp;&nbsp;<span class="c-key">hireable:</span> <span class="c-bool">true</span><br>
+          };
+          <div class="term-bottom">
+            <span>&gt;</span> echo $READY_TO_BUILD 🚀
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-stripe"></div>
+  </div>
+</body>
+</html>

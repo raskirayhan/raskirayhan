@@ -1,7 +1,9 @@
 <div align="center">
 
-  <!-- Banner Header with Embedded Profile Photo -->
-  <img src="./banner.svg" alt="Sheikh Raski Rayhan - Banner" width="100%" />
+  <!-- Banner Header with Embedded Profile Photo (Direct GitHub Raw URL for 100% reliable rendering) -->
+  <a href="https://github.com/raskirayhan">
+    <img src="https://raw.githubusercontent.com/raskirayhan/SheikhRaskiRayhan/main/banner.png" alt="Sheikh Raski Rayhan - Banner" width="100%" />
+  </a>
 
   <br/><br/>
 
@@ -88,6 +90,7 @@ I'm **Sheikh Raski Rayhan**, an enthusiastic and results-driven **Full Stack Dev
   <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
   <img src="https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white" alt="Mongoose" />
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
   <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma" />
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
 </p>
@@ -108,7 +111,41 @@ I'm **Sheikh Raski Rayhan**, an enthusiastic and results-driven **Full Stack Dev
 
 ---
 
-### 📊 GitHub Activity & Real-Time Stats
+### 🚀 Featured Projects
+
+| Project | Description | Tech Stack | Links |
+| :--- | :--- | :--- | :--- |
+| **🛠️ FixItNow** | Modern on-demand repair, booking, and home maintenance platform with interactive booking workflow & clean responsive UI. | `React` `Next.js` `Node.js` `Express` `MongoDB` `TailwindCSS` | [Live Demo ↗](https://fix-it-now-taupe.vercel.app/) • [Code ↗](https://github.com/raskirayhan/FixItNow-) |
+| **🏛️ G3 Architects Agency** | Professional architectural firm showcase platform featuring sleek project portfolios, client testimonials, and responsive layouts. | `React` `JavaScript` `TailwindCSS` `UI/UX` | [Live Demo ↗](https://g3-architect-website-repo.vercel.app/) • [Code ↗](https://github.com/raskirayhan/g3-architect-website-repo) |
+| **🐾 WarmPaws** | Compassionate pet adoption & animal rescue platform connecting animals in need with caring homes and community support. | `MERN Stack` `Authentication` `REST APIs` `TailwindCSS` | [Live Demo ↗](https://github.com/raskirayhan/WarmPaws) • [Code ↗](https://github.com/raskirayhan/WarmPaws) |
+
+---
+
+### 🟩 GitHub Contribution Calendar & Activity
+
+<div align="center">
+
+  <p align="center">
+    <b>🔥 Contributions Across 2026</b>
+  </p>
+
+  <!-- Live GitHub Contribution Heatmap Chart -->
+  <a href="https://github.com/raskirayhan">
+    <img src="https://ghchart.rshah.org/40c463/raskirayhan" alt="raskirayhan's Contribution Chart" width="100%" />
+  </a>
+
+  <br/><br/>
+
+  <!-- GitHub Streak Counter -->
+  <a href="https://github.com/raskirayhan">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=raskirayhan&theme=tokyonight&hide_border=true" width="85%" alt="Streak Stats" />
+  </a>
+
+</div>
+
+---
+
+### 📊 GitHub Metrics & Statistics
 
 <div align="center">
 
@@ -123,21 +160,7 @@ I'm **Sheikh Raski Rayhan**, an enthusiastic and results-driven **Full Stack Dev
     </tr>
   </table>
 
-  <br/>
-
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=raskirayhan&theme=tokyonight&hide_border=true" width="80%" alt="Streak Stats" />
-
 </div>
-
----
-
-### 🚀 Featured Projects
-
-| Project | Description | Tech Stack | Links |
-| :--- | :--- | :--- | :--- |
-| **🛠️ FixItNow** | Modern on-demand repair, booking, and home maintenance platform with interactive booking workflow & clean responsive UI. | `React` `Next.js` `Node.js` `Express` `MongoDB` `TailwindCSS` | [Live Demo ↗](https://fix-it-now-taupe.vercel.app/) • [Code ↗](https://github.com/raskirayhan/FixItNow-) |
-| **🏛️ G3 Architects Agency** | Professional architectural firm showcase platform featuring sleek project portfolios, client testimonials, and responsive layouts. | `React` `JavaScript` `TailwindCSS` `UI/UX` | [Live Demo ↗](https://g3-architect-website-repo.vercel.app/) • [Code ↗](https://github.com/raskirayhan/g3-architect-website-repo) |
-| **🐾 WarmPaws** | Compassionate pet adoption & animal rescue platform connecting animals in need with caring homes and community support. | `MERN Stack` `Authentication` `REST APIs` `TailwindCSS` | [Live Demo ↗](https://github.com/raskirayhan/WarmPaws) • [Code ↗](https://github.com/raskirayhan/WarmPaws) |
 
 ---
 
