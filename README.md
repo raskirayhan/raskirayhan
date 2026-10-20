@@ -167,7 +167,9 @@ I'm **Sheikh Raski Rayhan**, an enthusiastic and results-driven **Full Stack Dev
 ### 🏆 GitHub Trophies
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=raskirayhan&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4" alt="GitHub Trophies" />
+  <a href="https://github.com/raskirayhan">
+    <img src="https://github-profile-trophies.vercel.app/?username=raskirayhan&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&rank=-?" alt="GitHub Trophies" width="90%" />
+  </a>
 </div>
 
 ---
