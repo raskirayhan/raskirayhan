@@ -1,8 +1,8 @@
 <div align="center">
 
-  <!-- Banner Header with Embedded Profile Photo (Direct GitHub Raw URL for 100% reliable rendering) -->
+  <!-- Banner Header with Embedded Profile Photo -->
   <a href="https://github.com/raskirayhan">
-    <img src="https://raw.githubusercontent.com/raskirayhan/SheikhRaskiRayhan/main/banner.png" alt="Sheikh Raski Rayhan - Banner" width="100%" />
+    <img src="./banner.png" alt="Sheikh Raski Rayhan - Banner" width="100%" />
   </a>
 
   <br/><br/>
