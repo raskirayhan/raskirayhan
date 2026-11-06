@@ -2,7 +2,7 @@
 
   <!-- Banner Header with Embedded Profile Photo -->
   <a href="https://github.com/raskirayhan">
-    <img src="./banner.png" alt="Sheikh Raski Rayhan - Banner" width="100%" />
+    <img src="https://raw.githubusercontent.com/raskirayhan/raskirayhan/main/banner.png" alt="Sheikh Raski Rayhan - Banner" width="100%" />
   </a>
 
   <br/><br/>
@@ -115,9 +115,10 @@ I'm **Sheikh Raski Rayhan**, an enthusiastic and results-driven **Full Stack Dev
 
 | Project | Description | Tech Stack | Links |
 | :--- | :--- | :--- | :--- |
+| **🌸 Flower Market** | Modern artisanal floral e-commerce & botanical services platform built with Clean Architecture, cart state, and order workflows. | `React 18` `TypeScript` `Node.js` `Express` `Prisma` `PostgreSQL` | [Live Demo ↗](https://raskirayhan.github.io/flower-website/) • [Code ↗](https://github.com/raskirayhan/flower-website) |
 | **🛠️ FixItNow** | Modern on-demand repair, booking, and home maintenance platform with interactive booking workflow & clean responsive UI. | `React` `Next.js` `Node.js` `Express` `MongoDB` `TailwindCSS` | [Live Demo ↗](https://fix-it-now-taupe.vercel.app/) • [Code ↗](https://github.com/raskirayhan/FixItNow-) |
 | **🏛️ G3 Architects Agency** | Professional architectural firm showcase platform featuring sleek project portfolios, client testimonials, and responsive layouts. | `React` `JavaScript` `TailwindCSS` `UI/UX` | [Live Demo ↗](https://g3-architect-website-repo.vercel.app/) • [Code ↗](https://github.com/raskirayhan/g3-architect-website-repo) |
-| **🐾 WarmPaws** | Compassionate pet adoption & animal rescue platform connecting animals in need with caring homes and community support. | `MERN Stack` `Authentication` `REST APIs` `TailwindCSS` | [Live Demo ↗](https://github.com/raskirayhan/WarmPaws) • [Code ↗](https://github.com/raskirayhan/WarmPaws) |
+| **🐾 WarmPaws** | Compassionate pet adoption & animal rescue platform connecting animals in need with caring homes and community support. | `MERN Stack` `Authentication` `REST APIs` `TailwindCSS` | [Code ↗](https://github.com/raskirayhan/WarmPaws) |
 
 ---
 
